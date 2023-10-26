@@ -2,7 +2,21 @@
 
 {% block content %}
 
-<h1>PROJECTS</h1>
-<p>lorem</p>
+{{ message }}
+
+{% if number > 10 %}
+    <p>The numer is greater then 10</p>
+{% elif number == 10 %}
+    <p>The numer is 10</p>
+{% else %}
+    <p>The numer is less then 10</p>
+{% endif %}
+<hr>
+<h1>Projects</h1>
+<ul>
+    {% for project in projects %}
+        <li>Title: <a href="{% url 'project' project.id %}">{{ project.title }}</a> --- {{ project.description }}</li>
+    {% endfor %}
+</ul>
 
 {% endblock content %}
