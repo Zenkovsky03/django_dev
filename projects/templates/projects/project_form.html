@@ -3,7 +3,7 @@
 
 <h1>PROJECT FORM</h1>
 
-<form method="POST">
+<form action="" method="POST">
     {% csrf_token %}
     {% comment %} {{ form.as_p }} {% endcomment %}
     {% for field in form %}
