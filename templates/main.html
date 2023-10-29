@@ -1,6 +1,10 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
-<title>devBlog</title>
+<head>
+    <title>devBlog</title>
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+</head>
 <body>
     <h1>This is the main template</h1>
     {% include "navbar.html" %}
